@@ -1,15 +1,20 @@
-const projects = [
+import ProjectCard, { type Project } from "@/components/projects/ProjectCard";
+
+const projects: Project[] = [
   {
+    id: "devtask-ai",
     name: "DevTask AI",
     description: "AI-powered developer task management",
     status: "In Progress",
   },
   {
+    id: "portfolio-website",
     name: "Portfolio Website",
     description: "Personal developer portfolio",
     status: "Planning",
   },
   {
+    id: "learning-platform",
     name: "Learning Platform",
     description: "Interactive coding lessons",
     status: "In Progress",
@@ -22,7 +27,7 @@ export default function ProjectsPage() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight">Projects</h2>
+            <h1 className="text-3xl font-bold tracking-tight">Projects</h1>
             <p className="mt-3 text-slate-400">
               Manage your development projects in one place.
             </p>
@@ -39,20 +44,7 @@ export default function ProjectsPage() {
 
         <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
-            <article
-              key={project.name}
-              className="rounded-2xl border border-white/10 bg-slate-900/70 p-5 shadow-lg shadow-black/10"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="text-lg font-semibold">{project.name}</h3>
-                <span className="shrink-0 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-300">
-                  {project.status}
-                </span>
-              </div>
-              <p className="mt-3 text-sm leading-6 text-slate-400">
-                {project.description}
-              </p>
-            </article>
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>

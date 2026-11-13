@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-slate-950 px-6 py-16 text-white">
@@ -13,18 +15,18 @@ export default function Home() {
           organize work, keep projects moving, and focus on building.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="/projects/new"
+          <Link
+            href="/dashboard"
             className="inline-flex min-w-40 items-center justify-center rounded-xl bg-indigo-500 px-6 py-3 font-semibold text-white transition hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-slate-900"
           >
             Get Started
-          </a>
-          <a
-            href="/projects"
+          </Link>
+          <Link
+            href="/dashboard/projects"
             className="inline-flex min-w-40 items-center justify-center rounded-xl border border-white/15 px-6 py-3 font-semibold text-slate-200 transition hover:border-white/30 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-slate-900"
           >
             View Projects
-          </a>
+          </Link>
         </div>
       </section>
     </main>
