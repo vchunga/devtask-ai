@@ -1,25 +1,5 @@
-import ProjectCard, { type Project } from "@/components/projects/ProjectCard";
-
-const projects: Project[] = [
-  {
-    id: "devtask-ai",
-    name: "DevTask AI",
-    description: "AI-powered developer task management",
-    status: "In Progress",
-  },
-  {
-    id: "portfolio-website",
-    name: "Portfolio Website",
-    description: "Personal developer portfolio",
-    status: "Planning",
-  },
-  {
-    id: "learning-platform",
-    name: "Learning Platform",
-    description: "Interactive coding lessons",
-    status: "In Progress",
-  },
-];
+import ProjectCard from "@/components/projects/ProjectCard";
+import { projects } from "@/lib/projects";
 
 export default function ProjectsPage() {
   return (
